@@ -1,0 +1,73 @@
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.curtain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.left-curtain {
+  background: var(--purple, purple);
+  width: 33%;
+  height: 100%;
+  position: absolute;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+}
+.right-curtain {
+  background: linear-gradient(to right, transparent, rgba(77, 48, 57, 0.4));
+  width: 33%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.landing-content {
+  position: relative;
+  background: var(--turquoise, turquoise);
+  color: var(--purple, purple);
+  text-align: left;
+  padding: 40px 0 40px 20%;
+  z-index: 2;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+.curtain {
+  background: var(--white, white);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+}
+.landing-content h1 {
+  font-size: 4.5em;
+  color: var(--purple, purple);
+  text-shadow: var(--ts);
+}
+.landing-content h4 {
+  color: var(--purple, purple);
+  font-size: 1.5em;
+  font-weight: lighter;
+  padding-left: 4px;
+}
+.landing-content .btn {
+  margin-left: 4px;
+  margin-right: 15px;
+  margin-top: 40px;
+  font-weight: lighter;
+  font-size: 1.25em;
+}
+.landing-content .btn:last-of-type {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--purple, purple);
+  border-color: var(--purple, purple);
+}
+.landing-content .btn:hover {
+  color: var(--turquoise, turquoise);
+  border-color: var(--turquoise, turquoise);
+  background: rgba(0, 0, 0, 0.5);
+}
