@@ -9,10 +9,10 @@ export default function Dashboard() {
 
   return (
     <div className="main-wrapper">
-      <div className="dashboard">
+      {/* <div className="dashboard"> */}
         {error && <p className='error'>{error}</p>}
         {documents && <ProjectList projects={documents} />}
-      </div>
+      {/* </div> */}
     </div>
   )
 }

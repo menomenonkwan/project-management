@@ -28,6 +28,7 @@ function App() {
           <Route path="/" element={!user ? <Home /> : <Navigate to="/dashboard" /> } />
           <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard" /> } />
           <Route path="/signup" element={!user ? <Signup /> : <Navigate to="/dashboard" /> } />
+          {/* <Route path={["/dashboard", "/dashboard/:id"]} element={user ? <Dashboard /> : <Navigate to="/login" /> } /> */}
           <Route path="/dashboard" element={user ? <Dashboard /> : <Navigate to="/login" /> } />
           <Route path="/create" element={user ? <Create /> : <Navigate to="/login" /> } />
           <Route path="/projects/:id" element={user ? <Project /> : <Navigate to="/login" /> } />

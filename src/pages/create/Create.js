@@ -93,7 +93,7 @@ export default function Create() {
 
   return (
     <div className='main-wrapper'>
-      <form onSubmit={handleSubmit} className="new-project-form">
+      <form onSubmit={handleSubmit}>
         <h2>New Project</h2>
 
         {/* NAME */}
@@ -132,7 +132,7 @@ export default function Create() {
         <label className='prioritize'>
           <span>Prioritize:</span>
           <Switch isOn={priority} setIsOn={setPriority} />
-          <span className='is-priority'>{priority ? 'yes' : 'no'}</span>
+          {/* <span className='is-priority'>{priority ? 'yes' : 'no'}</span> */}
         </label>
 
         {/* CATEGORY */}

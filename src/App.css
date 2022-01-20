@@ -36,8 +36,9 @@
 }
 .main-wrapper {
   flex: 1;
-  display: grid;
-  place-content: top;
+  padding: 75px 50px;
+  /* display: grid; */
+  /* place-content: top; */
 }
 
 /* FORMS (LOGIN/SIGNUP) */

@@ -2,10 +2,10 @@
   background: salmon;
   width: 175px;
   text-align: center;
-  position: fixed;
+  /* position: fixed;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 0; */
 }
 .users h2 {
   margin: 20px 0;

@@ -9,14 +9,28 @@ export default function Project() {
   const { document, error } = useDocument('projects', id);
 
   if (error) {
-    return <div className="error">{error}</div>
+    return (
+      <div className='main-wrapper'>
+        <div className="project">
+          <p className="error">{error}</p>
+        </div>
+      </div>
+    )
   }
   if (!document) {
-    return <div>Loading...</div>
+    return (
+      <div className='main-wrapper'>
+        <div className="project">
+          <p>Loading...</p>
+        </div>
+      </div>
+    )
   }
 
   return (
-    <div>
+    <div className='main-wrapper'>
+      <div className="project">
+
       <h2>{document.name}</h2>
       <p>details: {document.details}</p>
       <p>category: {document.category}</p>
@@ -26,6 +40,7 @@ export default function Project() {
       <p>created by: {document.createdBy.displayName}</p>
       <p>due date: {document.dueDate.toDate().toDateString()}</p>
       <p>priority: {document.priority ? 'Yes' : 'No'}</p>
+      </div>
     </div>
   )
 }

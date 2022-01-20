@@ -1,12 +1,65 @@
 .project-list {
-  background: olive;
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* margin-top: 75px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 .card {
-  background: yellow;
-  padding: 20px;
+  background: salmon;
+  padding: 25px;
   margin: 10px 0;
-  font-size: 2em;
+  box-shadow: var(--bs);
+  /* font-size: 2em; */
+  position: relative;
 }
 .card:hover {
-  background: salmon;
+  background: var(--turquoise, --turquoise);
+}
+.card-name {
+  font-size: 1.25em;
+  text-transform: capitalize;
+  text-shadow: var(--ts);
+}
+.card-category {
+  font-style: italic;
+  color: var(--grey, grey);
+  padding: 5px 0;
+}
+.card-due-date {
+  font-size: 1em;
+  font-weight: lighter;
+}
+.card .prioritize {
+  /* width: 25px; */
+  height: 20px;
+  padding: 15px;
+  background: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+}
+.card .non-prioritize {
+  width: 25px;
+  height: 25px;
+  background: green;
+}
+.card-assigned {
+  border-top: 1px solid var(--white, whitesmoke);
+  margin-top: 25px;
+  padding-top: 10px;
+}
+.card-assigned ul {
+  display: flex;
+}
+.card-assigned li {
+  margin-right: 10px;
+}
+.card-assigned .avatar {
+  /* width: 30px;
+  height: 30px; */
 }
