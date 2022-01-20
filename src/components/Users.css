@@ -1,0 +1,41 @@
+.users {
+  background: salmon;
+  width: 175px;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.users h2 {
+  margin: 20px 0;
+}
+.users-list {
+  background: blue;
+}
+.user {
+  background: slateblue;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.online {
+  background: greenyellow;
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  border-radius: 50%;
+}
+
+.user-name {
+  margin: 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em;
+  max-height: 2em;
+  font-size: 0.85em;
+}

@@ -1,0 +1,17 @@
+.new-project-form {
+  width: 50%;
+  margin: 75px auto;
+}
+.prioritize {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.prioritize .switch {
+  margin: 0 10px 0 15px;
+}
+.prioritize .is-priority {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: bold;
+}

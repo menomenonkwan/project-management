@@ -1,13 +1,17 @@
 import { useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useLogin } from "../../hooks/useLogin";
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { login, loading, error } = useLogin();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ email, password });
+    login(email, password);
+    navigate('/dashboard');
   }
 
   return (
@@ -30,15 +34,18 @@ export default function Login() {
         <label>
           <span>Password:</span>
           <input 
-            type="email"
+            type="password"
             required
             onChange={(e) => setPassword(e.target.value)}
-            value={email} 
+            value={password} 
           />
         </label>
 
-        <button className="btn" type="submit">Submit</button>
-        {/* <p className="error">{error}</p> */}
+        {loading 
+          ? <button className="btn" type="submit" disabled>Submitting...</button>
+          : <button className="btn" type="submit">Submit</button>
+        }
+        {error && <p className="error">{ error}</p>}
       </form>
 
       <Link to="/signup" className="signin-access">Signup for an account</Link>

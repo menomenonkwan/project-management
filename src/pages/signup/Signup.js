@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSignup } from "../../hooks/useSignup";
 
 export default function Signup() {
   const [email, setEmail] = useState('');
@@ -7,10 +8,13 @@ export default function Signup() {
   const [displayName, setDisplayName] = useState('');
   const [profileImage, setProfileImage] = useState(null);
   const [profileImageError, setProfileImageError] = useState(null);
+  const { signup, loading, error } = useSignup();
+  const navigate = useNavigate();
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ email, password, displayName, profileImage });
+    signup(email, password, displayName, profileImage);
+    navigate('/dashboard');
   }
 
   const handleFileChange = (e) => {
@@ -19,12 +23,15 @@ export default function Signup() {
   
     if(!selected) {
       setProfileImageError('Please select an image, buddy');
+      return;
     }
     if(!selected.type.includes('image')) {
       setProfileImageError('Selected file must be an image');
+      return;
     }
-    if(selected.size > 1000000) {
-      setProfileImageError('Selected file must be less than 1MB. Sorry, buddy');
+    if(selected.size > 100000) {
+      setProfileImageError('Selected file must be less than 100kb. Sorry, buddy');
+      return;
     }
 
     setProfileImageError(null);
@@ -55,7 +62,6 @@ export default function Signup() {
             required
             onChange={(e) => setDisplayName(e.target.value)}
             value={displayName}
-            maxLength="12"
           />
         </label>
 
@@ -79,11 +85,14 @@ export default function Signup() {
             required
             onChange={handleFileChange}
           />
-          {/* <p className="error">{imgerr}</p> */}
+          {profileImageError && <p className="error">{profileImageError}</p>}
         </label>
 
-        <button className="btn" type="submit">Submit</button>
-        {/* <p className="error">{error}</p> */}
+        {loading 
+          ? <button className="btn" type="submit" disabled>Submitting...</button>
+          : <button className="btn" type="submit">Submit</button>
+        }
+        {error && <p className="error">{error}</p>}
       </form>
 
       <Link to="/login" className="signin-access">Login to your account</Link>

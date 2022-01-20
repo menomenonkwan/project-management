@@ -6,6 +6,8 @@
   --white: #efefef;
   --grey: #6e7076;
   --gray: var(--grey);
+  --light-grey: #ddd;
+  --light-gray: var(var(--light-grey));
   --purple: #4d3039;
   --blue: #3b25a8;
   --turquoise: #6da7b6;

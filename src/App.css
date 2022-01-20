@@ -24,11 +24,20 @@
   background: rgba(77, 48, 57, 0.84);
 }
 
+.btn:disabled {
+  background: var(--grey, grey);
+}
+
 .container {
   flex: 1;
   display: flex;
   place-content: center;
   width: 100%;
+}
+.main-wrapper {
+  flex: 1;
+  display: grid;
+  place-content: top;
 }
 
 /* FORMS (LOGIN/SIGNUP) */
@@ -60,6 +69,7 @@ label span {
 }
 input,
 textarea {
+  resize: vertical;
   font-family: inherit;
   width: 100%;
   padding: 8px 6px;

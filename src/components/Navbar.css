@@ -1,0 +1,18 @@
+.navbar {
+  margin: 50px 0;
+}
+.navbar a {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 15px;
+  font-weight: normal;
+  transition: all 0.2s ease;
+}
+.navbar img {
+  margin-right: 5px;
+}
+.navbar a:hover {
+  /* background: var(--white, whitesmoke); */
+  background: salmon;
+}

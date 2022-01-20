@@ -1,0 +1,12 @@
+.project-list {
+  background: olive;
+}
+.card {
+  background: yellow;
+  padding: 20px;
+  margin: 10px 0;
+  font-size: 2em;
+}
+.card:hover {
+  background: salmon;
+}
