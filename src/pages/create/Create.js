@@ -82,6 +82,7 @@ export default function Create() {
       priority,
       createdBy,
       assignedUsersList,
+      complete: false,
       comments: []
     }
     
@@ -93,7 +94,7 @@ export default function Create() {
 
   return (
     <div className='main-wrapper'>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='create-form'>
         <h2>New Project</h2>
 
         {/* NAME */}

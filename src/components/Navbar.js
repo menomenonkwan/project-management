@@ -1,23 +1,27 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // styles & images
 import './Navbar.css';
 import dashboardIcon from '../assets/dashboard.svg';
 import addIcon from '../assets/add.svg';
+import taskIcon from '../assets/task.svg';
 
 export default function Navbar() {
+  
   return (
     <nav className="navbar">
-      <Link to="/dashboard">
+      <NavLink to="/dashboard">
         <img src={dashboardIcon} alt="" />
         <p>Dashboard</p>
-      </Link>
-      <Link to="/create">
+      </NavLink>
+      <NavLink to="/create">
         <img src={addIcon} alt="" />
         <p>New Project</p>
-      </Link>
-      <Link to="/">Teams</Link>
-      <Link to="/">Calendar</Link>
+      </NavLink>
+      <NavLink to="/profile" disabled>
+        <img src={taskIcon} alt="" />
+        <p>My Profile</p>
+      </NavLink>
     </nav>
   );
 }

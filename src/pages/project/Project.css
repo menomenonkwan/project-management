@@ -1,4 +1,36 @@
 .project {
   /* display: grid;
   place-content: center; */
+  display: flex;
+}
+
+/* details section  */
+.project-details {
+  flex: 2;
+}
+.complete-btn {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: var(--purple, purple) !important;
+}
+
+/* comment section  */
+.project-comments {
+  flex: 1;
+  background: greenyellow;
+  max-width: 350px;
+}
+.comments-list {
+  max-height: 500px;
+  overflow: scroll;
+}
+.no-comment {
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 0;
+}
+.add-comment {
+  padding: 30px;
+}
+.add-comment label {
+  margin-top: 0;
 }

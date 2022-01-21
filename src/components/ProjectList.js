@@ -4,6 +4,19 @@ import Avatar from './Avatar';
 import './ProjectList.css';
 
 export default function ProjectList({ projects }) {
+  // sort by date
+  projects.sort((a, b) => {
+    const dateA = a.dueDate; 
+    const dateB = b.dueDate; 
+    if (dateA < dateB) {
+      return -1;
+    }
+    if (dateA > dateB) {
+      return 1;
+    }
+    return 0;
+  });
+
 
   return (
     <div className="project-list">
@@ -11,7 +24,7 @@ export default function ProjectList({ projects }) {
 
       {projects.map(project => (
         <Link to={`/projects/${project.id}`} key={project.id} >
-          <div className="card">
+          <div className="card" style={project.complete ? { background: 'var(--grey, grey)'} : null }>
             {project.priority && <p className='prioritize'>priority</p>}
             <h3 className='card-name'>{project.name}</h3>
             <p className='card-category'>{project.category}</p>
@@ -33,5 +46,4 @@ export default function ProjectList({ projects }) {
     </div>
   )
 }
-{/* https://www.framer.com/docs/animate-shared-layout/ */}
-{/* https://codesandbox.io/s/framer-motion-animatesharedlayout-app-store-demo-i1kct?from-embed */}
+

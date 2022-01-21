@@ -1,0 +1,6 @@
+.circle-progress {
+  border: 1px solid red;
+  width: fit-content;
+  display: grid;
+  place-items: center;
+}

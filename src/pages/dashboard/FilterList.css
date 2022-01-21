@@ -1,0 +1,23 @@
+.filter {
+  background: greenyellow;
+}
+.filter-list {
+  background: hotpink;
+  display: flex;
+}
+.filter-list li {
+}
+.filter-btn {
+  font-family: inherit;
+  font-weight: lighter;
+  font-size: 0.8em;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+.filter-btn:hover {
+}
+.filter-active {
+  background: var(--turquoise, turquoise);
+}

@@ -2,11 +2,14 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import { useLogout } from '../hooks/useLogout';
 import Avatar from './Avatar';
 import Navbar from './Navbar';
+import Switch from './Switch';
 
 // styles
 import './Sidebar.css';
+import { useState } from 'react';
 
 export default function Sidebar() {
+  const [isOn, setIsOn] = useState(false);
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
@@ -20,6 +23,8 @@ export default function Sidebar() {
       <button className="btn" onClick={logout}>logout</button>
 
       <Navbar />
+
+      <Switch isOn={isOn} setIsOn={setIsOn} purpose="mode" />
     </div>
   )
 }

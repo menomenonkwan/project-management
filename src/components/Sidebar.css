@@ -2,6 +2,8 @@
   background: var(--turquoise, turquoise);
   width: 150px;
   text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
   /* position: fixed;
   left: 0;
   top: 0;
@@ -26,4 +28,7 @@
   font-size: 1em;
   text-transform: capitalize;
   word-break: break-all;
+}
+.sidebar .mode-switch {
+  margin: 0 auto;
 }

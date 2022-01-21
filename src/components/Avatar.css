@@ -6,6 +6,7 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: var(--bs);
+  background: var(--white, whitesmoke);
 }
 .avatar img {
   width: 100%;

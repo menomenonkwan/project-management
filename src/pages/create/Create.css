@@ -1,3 +1,6 @@
+.create-form {
+  max-width: 700px;
+}
 .prioritize {
   display: flex;
   justify-content: flex-start;
