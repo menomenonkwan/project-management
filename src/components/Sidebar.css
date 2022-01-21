@@ -17,19 +17,17 @@
 }
 .current-user::after {
   content: "";
-  width: 90%;
+  width: 80%;
   height: 1px;
   background: linear-gradient(
     to right,
-    var(--turquoise, turquoise),
+    /* var(--turquoise, turquoise), */ var(--grey, grey),
     var(--grey, grey),
-    var(--grey, grey),
-    var(--grey, grey),
-    var(--turquoise, turquoise)
+    var(--grey, grey) /* var(--turquoise, turquoise) */
   );
   position: absolute;
   bottom: 0;
-  left: 5%;
+  left: 10%;
   border-radius: 50%;
 }
 .current-user-name {

@@ -1,8 +1,9 @@
 .dashboard-header {
   /* width: 90%; */
   background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.15));
-  margin: auto;
+  margin: 0 auto 20px;
   padding: 20px;
+  /* box-shadow: var(--bs); */
 }
 .dashboard-general-info {
   display: flex;

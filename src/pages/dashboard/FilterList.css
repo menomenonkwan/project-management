@@ -8,12 +8,14 @@
 .filter-list li {
 }
 .filter-btn {
+  /* background: var(--white, whitesmoke); */
   font-family: inherit;
-  font-weight: lighter;
-  font-size: 0.8em;
+  /* font-weight: lighter; */
+  font-size: 0.85em;
   padding: 5px 10px;
   border-radius: 0;
   border: none;
+  /* border-bottom: 1px solid var(--grey, grey); */
   cursor: pointer;
 }
 .filter-btn:hover {
