@@ -18,10 +18,6 @@ export default function Navbar() {
         <img src={addIcon} alt="" />
         <p>New Project</p>
       </NavLink>
-      <NavLink to="/profile" disabled>
-        <img src={taskIcon} alt="" />
-        <p>My Profile</p>
-      </NavLink>
     </nav>
   );
 }

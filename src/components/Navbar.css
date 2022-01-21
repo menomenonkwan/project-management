@@ -1,5 +1,5 @@
 .navbar {
-  margin: 50px 0;
+  margin-bottom: 40px;
 }
 .navbar a {
   display: flex;
@@ -13,6 +13,12 @@
   margin-right: 5px;
 }
 .navbar a:hover {
-  /* background: var(--white, whitesmoke); */
-  background: salmon;
+  background: rgba(142, 217, 236, 0.5);
+  /* background: rgba(250, 128, 114, 0.5); */
+}
+.active {
+  background: var(--salmon, salmon);
+}
+.navbar a.active:hover {
+  background: var(--salmon, salmon);
 }

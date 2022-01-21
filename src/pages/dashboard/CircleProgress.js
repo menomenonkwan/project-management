@@ -13,7 +13,9 @@ export default function CircleProgress({ percentage }) {
           
           // strokeWidth 	Width of circular line relative to total width of component, a value from 0-100. Default: 8.
           strokeWidth={12}
-          background={false}          // background 	Whether to display background color. Default: false.
+          // background={false}          // background 	Whether to display background color. Default: false.
+          background={true}
+        // backgroundPadding={6}
           styles={
             
           
@@ -35,12 +37,20 @@ export default function CircleProgress({ percentage }) {
             // pathTransition: 'none',
             
             // Colors
-            pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
-            textColor: '#f88',
-            trailColor: '#d6d6d6',
-            backgroundColor: '#3e98c7',
+            pathColor: 'var(--turquoise, turquoise)',
+            // pathColor: `rgba(109, 167, 182, ${percentage / 100})`,
+            // pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
+            textColor: 'var(--purple, purple)',
+            // textColor: 'var(--salmon, salmon)',
+            trailColor: '#fefefe',
+            // trailColor: 'var(--white, whitesmoke)',
+            // trailColor: '#d6d6d6',
+            // backgroundColor: '#3e98c7',
+            backgroundColor: `rgba(250, 128, 114, ${percentage / 100})`,
+            
           })}
-        />;
+        />
+        
       </div>
 
       <p>Projects Completed</p>

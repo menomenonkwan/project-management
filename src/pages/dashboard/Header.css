@@ -1,0 +1,17 @@
+.dashboard-header {
+  /* width: 90%; */
+  background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.15));
+  margin: auto;
+  padding: 20px;
+}
+.dashboard-general-info {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+}
+.dashboard-general-info h1 {
+  margin-right: auto;
+  font-size: 3em;
+  text-shadow: var(--ts);
+  color: var(--purple, purple);
+}

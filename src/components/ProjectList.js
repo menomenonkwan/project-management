@@ -24,7 +24,7 @@ export default function ProjectList({ projects }) {
 
       {projects.map(project => (
         <Link to={`/projects/${project.id}`} key={project.id} >
-          <div className="card" style={project.complete ? { background: 'var(--grey, grey)'} : null }>
+          <div className={`card ${project.complete ? 'card-completed' : null}`}>
             {project.priority && <p className='prioritize'>priority</p>}
             <h3 className='card-name'>{project.name}</h3>
             <p className='card-category'>{project.category}</p>

@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Raleway:wght@300;400;600&display=swap");
+
 :root {
   --primary: "Raleway";
+  --secondary: "EB Garamond";
 
   --black: #010101;
   --white: #efefef;
@@ -9,9 +12,10 @@
   --light-grey: #ddd;
   --light-gray: var(var(--light-grey));
   --purple: #4d3039;
+  --violet: rgb(119, 74, 88);
   --blue: #3b25a8;
   --turquoise: #6da7b6;
-  --orange: var(--turquoise);
+  --salmon: rgb(250, 128, 114);
 
   --bs: 0 5px 10px rgba(0, 0, 0, 0.2);
   --ts: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -40,4 +44,14 @@ a {
 
 ul {
   list-style: none;
+}
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background: var(--turquoise, turquoise);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--purple, purple);
+  -webkit-border-radius: 1ex;
 }

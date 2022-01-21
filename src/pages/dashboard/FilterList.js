@@ -11,7 +11,7 @@ export default function FilterList({ currentFilter, changeFilter }) {
 
   return (
     <div className='filter'>
-      <p>Filter:</p>
+      {/* <p>Filter:</p> */}
       <ul className='filter-list'>
         {filterList.map((filter, i) => (
           <li key={i}>

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
-import CircleProgress from './CircleProgress';
-import ProjectList from '../../components/ProjectList';
 import { useCollection } from '../../hooks/useCollection';
 import { useAuthContext } from '../../hooks/useAuthContext';
 
+// components
+import ProjectList from '../../components/ProjectList';
+import Header from './Header';
+
 // styles
 import './Dashboard.css';
-import FilterList from './FilterList';
 
 export default function Dashboard() {
   const [filter, setFilter] = useState('all');
@@ -59,20 +60,17 @@ export default function Dashboard() {
     if (!projects) { return; }
     
     const completed = projects.filter(doc => doc.complete === true);
-    const completedPercentage = (completed.length / projects.length * 100).toFixed(2);
+    const completedPercentage = (completed.length / projects.length * 100).toFixed(0);
     
     setPercentage(isNaN(completedPercentage) ? 0 : completedPercentage);
   }, [projects]);
 
   return (
-    <div className="main-wrapper">
-      {/* <div className="dashboard"> */}
-        <CircleProgress percentage={percentage} />
-        <FilterList currentFilter={filter} changeFilter={changeFilter} />
-        {error && <p className='error'>{error}</p>}
-        {projects && <ProjectList projects={projects} />}
+    <div className="main-wrapper dashboard">
+      <Header percentage={percentage} currentFilter={filter} changeFilter={changeFilter} />
 
-      {/* </div> */}
+      {error && <p className='error'>{error}</p>}
+      {projects && <ProjectList projects={projects} />}
     </div>
   )
 }

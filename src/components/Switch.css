@@ -45,17 +45,24 @@
 /* MODE SWITCH  */
 .mode-switch {
   height: 30px;
-  width: 75px;
+  width: 55px;
   background: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    #e79950 0%,
+    #bb4848 100.2%
+  );
+  /* background: radial-gradient(
     circle farthest-corner at 10% 20%,
     #fdcb32 0%,
     #f43862 100.2%
-  );
+  ); */
+  /*D0B05C BB4848 */
   border-radius: 25px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   padding: 0 5px;
+  margin-right: 30px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -67,15 +74,16 @@
   color: #f88748;
 }
 [data-darkmode="true"] {
-  background: #52527a;
-}
-[data-darkmode="true"] .mode-switch {
-  background: linear-gradient(
-    109.8deg,
+  /* background: #52527a; */
+  background: radial-gradient(
+    circle farthest-corner at 10% 20%,
     #3e0574 -5.2%,
     #290e97 -5.2%,
     #d84494 103.3%
   );
+}
+[data-darkmode="true"] .mode-switch {
+  background: linear-gradient(109.8deg);
 }
 [data-darkmode="true"] .mode-switch-icon {
   color: #501a96;

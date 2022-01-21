@@ -1,8 +1,8 @@
 .filter {
-  background: greenyellow;
+  /* background: greenyellow; */
 }
 .filter-list {
-  background: hotpink;
+  /* background: hotpink; */
   display: flex;
 }
 .filter-list li {

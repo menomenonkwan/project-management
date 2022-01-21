@@ -1,34 +1,72 @@
 .sidebar {
-  background: var(--turquoise, turquoise);
-  width: 150px;
+  /* background: var(--violet, rgb(119, 74, 88));6da7b6 */
+  background: linear-gradient(200deg, var(--turquoise, turquoise), #397a8a);
+  width: 200px;
   text-align: center;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0; */
-}
-.sidebar .btn {
-  text-transform: uppercase;
-  font-size: 0.75em;
+  color: var(--white, whitesmoke);
 }
 .current-user {
+  /* background: var(--purple, purple); */
+  padding: 40px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px auto 10px;
+  /* background: rgba(0, 0, 0, 0.25); */
+  /* border-bottom: 1px solid var(--grey, grey); */
+  position: relative;
 }
-.current-user .avatar {
-  width: 50px;
-  height: 50px;
+.current-user::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--turquoise, turquoise),
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--turquoise, turquoise)
+  );
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  border-radius: 50%;
 }
 .current-user-name {
+  letter-spacing: 0.07em;
+  font-size: 1.25em;
   padding: 10px;
-  font-size: 1em;
   text-transform: capitalize;
   word-break: break-all;
+  /* text-shadow: var(--ts); */
+}
+.sidebar .btn {
+  /* text-transform: uppercase; */
+  text-transform: capitalize;
+  /* text-transform: uppercase; */
+  font-size: 0.85em;
+  letter-spacing: 0.06em;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--turquoise, turquoise);
+  /* color: var(--white, turquoise); */
+  border-color: transparent;
+  /* filter: brightness(1.2); */
+  /* filter: brightness(0.8); */
+  /* box-shadow: none; */
+}
+.sidebar .btn:hover {
+  color: var(--turquoise, turquoise);
+  /* border-color: var(--turquoise, turquoise); */
+  background: rgba(0, 0, 0, 0.45);
+  /* filter: brightness(1.1); */
+  /* border-color: var(--white, whitesmoke); */
+}
+.current-user .avatar {
+  width: 55px;
+  height: 55px;
 }
 .sidebar .mode-switch {
   margin: 0 auto;
+  box-shadow: var(--bs);
 }

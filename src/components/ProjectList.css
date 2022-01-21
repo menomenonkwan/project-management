@@ -2,16 +2,21 @@
   /* background: rgba(0, 0, 0, 0.1); */
   /* margin-top: 75px; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
+  width: 90%;
+  margin: auto;
 }
 .card {
-  background: salmon;
+  /* background: var(--white, whitesmoke); */
+  background: #fefefe;
+  /* background: salmon; */
   padding: 25px;
   margin: 10px 0;
   box-shadow: var(--bs);
   /* font-size: 2em; */
   position: relative;
+  transition: all 0.2s ease;
 }
 .card:hover {
   background: var(--turquoise, --turquoise);
@@ -32,16 +37,25 @@
 }
 .card .prioritize {
   /* width: 25px; */
+  font-family: var(--secondary), "serif";
   height: 20px;
   padding: 15px;
-  background: red;
+  /* background: darkred; */
+  /* background: var(--purple); */
+  background: var(--violet, violet);
+  color: var(--white, whitesmoke);
+  /* color: var(--white); */
+  /* background: rgb(247, 69, 69); */
   position: absolute;
   top: 0;
   right: 0;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 0.85em;
+  letter-spacing: 0.025em;
   font-weight: bold;
   text-align: right;
+  border-bottom-left-radius: 12px;
+  box-shadow: var(--bs);
 }
 .card .non-prioritize {
   width: 25px;
@@ -62,4 +76,9 @@
 .card-assigned .avatar {
   /* width: 30px;
   height: 30px; */
+}
+.card-completed {
+  background: #ccc;
+  /* text-decoration: line-through; */
+  color: var(--grey, grey);
 }

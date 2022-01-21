@@ -35,22 +35,26 @@ export default function Comments({ document }) {
   return (
     <div className='project-comments'>
       <h4>Project Comments:</h4>
-      {document.comments.length === 0 && (
-        <p className='no-comment'>No comments...</p>
-      )}
-      <ul className='comments-list'>
-        {document.comments.map(post => (
-          <li key={post.id}>
-            <div>
-              <Avatar src={post.photoURL} />
-              <h5>{post.displayName}</h5>
-            </div>
-            <p>{post.comment}</p>
-            <p>{post.createdAt.toDate().toDateString()}</p>
-            <p>{post.createdAt.toDate().toLocaleTimeString()}</p>
-          </li>
-        ))}
-      </ul>
+        {/* {document.comments.length === 0 && (
+          <p className='no-comment'>No comments...</p>
+        )} */}
+        {document.comments.length === 0 
+          ? <p className='no-comment'>No comments...</p>
+          :
+            <ul className='comments-list'>
+              {document.comments.map(post => (
+                <li key={post.id} className='comments-comment-info'>
+                  <div className='comment-poster'>
+                    <Avatar src={post.photoURL} />
+                    <h5 className='comment-poster-name'>{post.displayName}</h5>
+                  </div>
+                  <p className='comments-comment'>{post.comment}</p>
+                  <p className='comments-date'>{post.createdAt.toDate().toDateString()}</p>
+                  <p className='comments-time'>{post.createdAt.toDate().toLocaleTimeString()}</p>
+                </li>
+              ))}
+            </ul>
+          }
 
       <form className="add-comment" onSubmit={handleSubmit}>
         <label>

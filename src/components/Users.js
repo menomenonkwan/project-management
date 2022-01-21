@@ -22,7 +22,7 @@ export default function Users() {
 
   return (
     <div className='users'>
-      <h2>All Users</h2>
+      <h2>Team Members</h2>
       {error && <p className='error'>{ error }</p>}
 {/* 
       <ul className="users-list">
@@ -35,19 +35,28 @@ export default function Users() {
         ))}
       </ul> */}
 
-      <h4>online users</h4>
+      <h4 className='online-status'>online:</h4>
       <ul className="users-list">
         {online && online.map(member => (
           <li className='user' key={member.id}>
-            {member.online && <div className='online'></div>}
-            <p className='user-name'>{member.displayName}</p>
             <Avatar src={member.photoURL} />
+            <p className='user-name'>{member.displayName}</p>
+            {member.online && <div className='online'></div>}
           </li>
         ))}
       </ul>
 
-      <h4>offline users</h4>
+      <h4 className='online-status'>offline:</h4>
       <ul className="users-list">
+        {offline && offline.map(member => (
+          <li className='user' key={member.id}>
+            <Avatar src={member.photoURL} />
+            <p className='user-name'>{member.displayName}</p>
+            {member.online && <div className='online'></div>}
+          </li>
+        ))}
+      </ul>
+      {/* <ul className="users-list">
         {offline && offline.map(member => (
           <li className='user' key={member.id}>
             {member.online && <div className='online'></div>}
@@ -55,7 +64,7 @@ export default function Users() {
             <Avatar src={member.photoURL} />
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   )
 }

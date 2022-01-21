@@ -41,9 +41,6 @@
   /* display: grid; */
   /* place-content: top; */
 }
-.active {
-  background: salmon;
-}
 
 /* FORMS (LOGIN/SIGNUP) */
 .form-container {

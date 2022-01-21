@@ -1,23 +1,43 @@
 .users {
-  background: salmon;
-  width: 175px;
+  background: linear-gradient(235deg, var(--turquoise, turquoise), #397a8a);
+  min-width: 200px;
   text-align: center;
-  /* position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0; */
+  padding: 20px 30px;
 }
 .users h2 {
   margin: 20px 0;
 }
+.online-status {
+  /* position: relative; */
+  font-size: 1.05em;
+  text-transform: uppercase;
+  text-align: left;
+  padding-top: 20px;
+}
+/* .online-status::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--turquoise, turquoise)
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+} */
 .users-list {
-  background: blue;
+  background: rgba(0, 0, 0, 0.05);
 }
 .user {
-  background: slateblue;
+  background: rgba(0, 0, 0, 0.075);
   padding: 10px;
+  margin: 3px 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 }
 .online {
@@ -28,10 +48,10 @@
   min-height: 10px;
   border-radius: 50%;
 }
-
 .user-name {
   margin: 0 8px;
   overflow: hidden;
+  font-weight: lighter;
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: block;
