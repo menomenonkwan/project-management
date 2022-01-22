@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useCollection } from '../hooks/useCollection';
+import { useThemeContext } from '../hooks/useThemeContext';
 import Avatar from './Avatar';
 
 // styles
@@ -9,6 +10,7 @@ export default function Users() {
   const [online, setOnline] = useState(null);
   const [offline, setOffline] = useState(null);
   const { documents: members, error } = useCollection('users');
+  const { mode } = useThemeContext();
 
   useEffect(() => {
     if(members) {
@@ -21,7 +23,7 @@ export default function Users() {
   }, [members]);
 
   return (
-    <div className='users'>
+    <div className={`users ${mode}`}>
       <h2>Team Members</h2>
       {error && <p className='error'>{ error }</p>}
 {/* 

@@ -17,8 +17,10 @@
   --turquoise: #6da7b6;
   --salmon: rgb(250, 128, 114);
 
+  --dark-mode-turquoise: #397a8a;
+  --dark-mode-blue: #2f626e;
   --bs: 0 5px 10px rgba(0, 0, 0, 0.2);
-  --ts: 0 2px 4px rgba(0, 0, 0, 0.15);
+  --ts: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 * {

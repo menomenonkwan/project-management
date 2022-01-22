@@ -2,7 +2,7 @@
   /* background: rgba(0, 0, 0, 0.1); */
   /* margin-top: 75px; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 325px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
   /* width: 90%; */
   margin: auto;
@@ -13,14 +13,14 @@
   background: #fefefe;
   /* background: salmon; */
   padding: 25px;
-  margin: 10px 0;
+  /* margin: 10px 0; */
   box-shadow: var(--bs);
   /* font-size: 2em; */
   position: relative;
   transition: all 0.2s ease;
 }
 .card:hover {
-  background: var(--turquoise, --turquoise);
+  background: var(--turquoise, turquoise);
 }
 .card-name {
   font-size: 1.25em;
@@ -86,4 +86,20 @@
 }
 .card-completed .card-category {
   color: var(--white, whitesmoke);
+}
+
+/* THEME */
+.dark .card {
+  background: #ddd;
+}
+.dark .card:hover {
+  background: var(--turquoise, turquoise);
+}
+.dark .card-completed {
+  background: var(--grey, grey);
+  text-decoration: line-through;
+  color: #ddd;
+}
+.dark .card-completed:hover {
+  background: var(--grey, grey);
 }

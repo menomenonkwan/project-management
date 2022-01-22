@@ -8,14 +8,16 @@ import Header from './Header';
 
 // styles
 import './Dashboard.css';
+import { useThemeContext } from '../../hooks/useThemeContext';
 
 export default function Dashboard() {
   const [filter, setFilter] = useState('all');
   const [percentage, setPercentage] = useState(0);
   const { documents, error } = useCollection('projects');
   const { user } = useAuthContext();
+  const { mode } = useThemeContext();
   
-
+  console.log(mode);
 
   const changeFilter = (newFilter) => {
     setFilter(newFilter);
@@ -66,7 +68,8 @@ export default function Dashboard() {
   }, [projects]);
 
   return (
-    <div className="main-wrapper dashboard">
+    <div className={`main-wrapper dashboard ${mode}`}>
+    {/* <div className="main-wrapper dashboard"> */}
       <Header percentage={percentage} currentFilter={filter} changeFilter={changeFilter} />
 
       {error && <p className='error'>{error}</p>}

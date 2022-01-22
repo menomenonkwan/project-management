@@ -68,3 +68,30 @@
   margin: 0 auto;
   box-shadow: var(--bs);
 }
+
+/* THEME  */
+.sidebar.dark {
+  /* filter: brightness(85%); */
+  background: linear-gradient(
+    200deg,
+    var(--dark-mode-turquoise),
+    var(--dark-mode-blue)
+  );
+}
+
+.sidebar.dark .current-user::after {
+  background: linear-gradient(
+    to right,
+    /* var(--turquoise, turquoise), */ var(--dark-mode-turquoise, grey),
+    var(--dark-mode-blue, grey),
+    var(--dark-mode-blue, grey),
+    var(--dark-mode-blue, grey),
+    var(--dark-mode-turquoise, grey) /* var(--turquoise, turquoise) */
+  );
+}
+
+/* @media (max-width: 1200px) {
+  .sidebar {
+    width: 200px;
+  }
+} */

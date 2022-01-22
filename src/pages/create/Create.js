@@ -11,6 +11,7 @@ import { Timestamp } from "firebase/firestore";
 import './Create.css';
 import { useFirestore } from '../../hooks/useFirestore';
 import { useNavigate } from 'react-router-dom';
+import { useThemeContext } from '../../hooks/useThemeContext';
 
 const categoryOptions = [
   { value: 'cleaning', label: 'Cleaning' },
@@ -19,7 +20,15 @@ const categoryOptions = [
   { value: 'errands', label: 'Errands' },
   { value: 'relax', label: 'Relax' },
   { value: 'social', label: 'Social' }
-]
+];
+
+const customStyles = {
+    control: () => ({
+    background: '#ddd',
+    display: 'flex',
+    borderRadius: '5px;'
+  })
+}
 
 export default function Create() {
   const { documents } = useCollection('users');
@@ -27,6 +36,7 @@ export default function Create() {
   const { user } = useAuthContext('');
   const { addDocument, response } = useFirestore('projects');
   const navigate = useNavigate();
+  const { mode } = useThemeContext();
 
   // FORM FIELDS
   const [name, setName] = useState('');
@@ -93,7 +103,7 @@ export default function Create() {
   }
 
   return (
-    <div className='main-wrapper'>
+    <div className={`main-wrapper ${mode}`}>
       <form onSubmit={handleSubmit} className='create-form'>
         <h2>New Project</h2>
 
@@ -140,6 +150,7 @@ export default function Create() {
         <label>
           <span>Category:</span>
           <Select 
+            styles={mode === 'dark' ? customStyles : ''}
             options={categoryOptions}
             onChange={(option) => setCategory(option)}
           />
@@ -149,6 +160,7 @@ export default function Create() {
         <label>
           <span>Assign:</span>
           <Select 
+            styles={mode === 'dark' ? customStyles : ''}
             options={users}
             onChange={(option) => setAssigned(option)}
             isMulti

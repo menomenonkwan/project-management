@@ -71,3 +71,10 @@
   border-color: var(--turquoise, turquoise);
   background: rgba(0, 0, 0, 0.5);
 }
+.version {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  font-weight: lighter;
+}

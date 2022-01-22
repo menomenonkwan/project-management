@@ -9,10 +9,15 @@
   display: flex;
   /* justify-content: space-between; */
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .dashboard-general-info h1 {
   margin-right: auto;
   font-size: 3em;
   text-shadow: var(--ts);
   color: var(--purple, purple);
+}
+
+.dashboard-header.dark h1 {
+  color: var(--white, whitesmoke);
 }

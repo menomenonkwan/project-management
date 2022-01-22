@@ -7,14 +7,16 @@ import Summary from './Summary';
 
 // styles
 import './Project.css';
+import { useThemeContext } from '../../hooks/useThemeContext';
 
 export default function Project() {
   const { id } = useParams();
   const { document, error } = useDocument('projects', id);
+  const { mode } = useThemeContext();
 
   if (error) {
     return (
-      <div className='main-wrapper'>
+      <div className={`main-wrapper ${mode}`}>
         <div className="project">
           <p className="error">{error}</p>
         </div>
@@ -23,7 +25,7 @@ export default function Project() {
   }
   if (!document) {
     return (
-      <div className='main-wrapper'>
+      <div className={`main-wrapper ${mode}`}>
         <div className="project">
           <p>Loading...</p>
         </div>
@@ -32,7 +34,7 @@ export default function Project() {
   }
 
   return (
-    <div className='main-wrapper'>
+    <div className={`main-wrapper ${mode}`}>
       <div className="project">
         <Summary document={document} />
         <Comments document={document} />

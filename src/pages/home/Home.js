@@ -52,6 +52,13 @@ export default function Home() {
           <Link to='/signup' className='btn'>Signup</Link>
         </motion.div>
       </motion.div>
+      <motion.h4 
+        className='version'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5, delay: 1.65 }}
+      >Desktop Version</motion.h4>
     </div>
   )
 }

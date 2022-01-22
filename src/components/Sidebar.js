@@ -1,5 +1,6 @@
 import { useAuthContext } from '../hooks/useAuthContext';
 import { useLogout } from '../hooks/useLogout';
+import { useThemeContext } from '../hooks/useThemeContext';
 
 // components
 import Avatar from './Avatar';
@@ -11,9 +12,10 @@ import './Sidebar.css';
 export default function Sidebar() {
   const { logout } = useLogout();
   const { user } = useAuthContext();
+  const { mode } = useThemeContext();
 
   return (
-    <div className='sidebar'>
+    <div className={`sidebar ${mode}`}>
       <div className="current-user">
         <Avatar src={user.photoURL} />
         <h3 className='current-user-name'>{ user.displayName }</h3>

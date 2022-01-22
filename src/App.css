@@ -105,3 +105,8 @@ form button {
   margin: 20px 0;
   font-weight: bold;
 }
+
+/* DARK/LIGHT MODE  */
+.main-wrapper.dark {
+  background: rgba(77, 48, 57, 0.84);
+}

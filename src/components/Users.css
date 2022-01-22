@@ -59,3 +59,27 @@
   max-height: 2em;
   font-size: 0.85em;
 }
+
+/* THEME  */
+.users.dark {
+  /* filter: brightness(85%); */
+  background: linear-gradient(
+    235deg,
+    var(--dark-mode-turquoise),
+    var(--dark-mode-blue)
+  );
+}
+.dark .users-list {
+  background: none;
+}
+.dark .user {
+  /* background: rgba(0, 0, 0, 0.075); */
+  background: var(--violet);
+  color: var(--white, whitesmoke);
+}
+
+/* @media (max-width: 1200px) {
+  .users {
+    width: unset;
+  }
+} */

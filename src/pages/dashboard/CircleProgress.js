@@ -1,8 +1,13 @@
+import { browserPopupRedirectResolver } from 'firebase/auth';
 import { CircularProgressbar,  buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { useThemeContext } from '../../hooks/useThemeContext';
 import './CircleProgress.css';
 
 export default function CircleProgress({ percentage }) {
+  const { mode } = useThemeContext();
+
+  const fontColor = mode === 'dark' ? 'var(--salmon, salmon)' : 'var(--purple, purple)';
 
   return (
     <div className='circle-progress'>
@@ -14,7 +19,7 @@ export default function CircleProgress({ percentage }) {
           // strokeWidth 	Width of circular line relative to total width of component, a value from 0-100. Default: 8.
           strokeWidth={12}
           // background={false}          // background 	Whether to display background color. Default: false.
-          background={true}
+          background={mode === 'dark' ? false : true}
         // backgroundPadding={6}
           styles={
             
@@ -40,8 +45,10 @@ export default function CircleProgress({ percentage }) {
             pathColor: 'var(--turquoise, turquoise)',
             // pathColor: `rgba(109, 167, 182, ${percentage / 100})`,
             // pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
-            textColor: 'var(--purple, purple)',
-            // textColor: 'var(--salmon, salmon)',
+            // textColor: 'var(--purple, purple)',
+            textColor: `${fontColor}`,
+            // textColor: `${fontColor} === 'dark' ? 'var(--salmon, salmon)' : 'var(--purple, purple)'`,
+        
             trailColor: '#fefefe',
             // trailColor: 'var(--white, whitesmoke)',
             // trailColor: '#d6d6d6',
@@ -53,7 +60,7 @@ export default function CircleProgress({ percentage }) {
         
       </div>
 
-      <p>Projects Completed</p>
+      <p style={{ color: fontColor }}>Projects Completed</p>
     </div>
   )
 }

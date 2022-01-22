@@ -1,9 +1,13 @@
+import { useThemeContext } from '../hooks/useThemeContext';
+
 // styles
 import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
 import './ProjectList.css';
 
 export default function ProjectList({ projects }) {
+  const { mode } = useThemeContext();
+
   // sort by date
   projects.sort((a, b) => {
     const dateA = a.dueDate; 
@@ -19,12 +23,12 @@ export default function ProjectList({ projects }) {
 
 
   return (
-    <div className="project-list">
+    <div className={`project-list ${mode}`}>
       {projects.length === 0 && <p>We have no projects</p>}
 
       {projects.map(project => (
         <Link to={`/projects/${project.id}`} key={project.id} >
-          <div className={`card ${project.complete ? 'card-completed' : null}`}>
+          <div className={`card ${project.complete ? 'card-completed' : ''}`}>
             {project.priority && <p className='prioritize'>priority</p>}
             <h3 className='card-name'>{project.name}</h3>
             <p className='card-category'>{project.category}</p>

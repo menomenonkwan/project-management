@@ -76,6 +76,7 @@
 .project-info span {
   font-weight: bold;
   line-height: 1.5;
+  font-size: 1.1em;
 }
 .project-created-at {
 }
@@ -130,8 +131,8 @@
   max-height: 300px;
   width: 100%;
   overflow-wrap: break-word;
-  /* overflow: scroll; */
   overflow-y: scroll;
+  overflow-x: hidden;
   border: 1px solid var(--grey, grey);
   margin: 10px 0 40px;
   background: var(--white, whitesmoke);
@@ -196,4 +197,13 @@
 .add-comment span {
   font-size: 0.9em;
   color: var(--purple, purple);
+}
+
+.dark .project,
+.dark form {
+  background: #ddd;
+}
+
+.dark textarea {
+  background: var(--white, whitesmokes);
 }

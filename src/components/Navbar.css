@@ -22,3 +22,7 @@
 .navbar a.active:hover {
   background: var(--salmon, salmon);
 }
+
+.dark a:hover {
+  background: var(--dark-mode-turquoise);
+}

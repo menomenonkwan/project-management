@@ -14,3 +14,18 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+.dark .create-form {
+  background: var(--purple);
+  /* color: var(--white, whitesmoke); */
+}
+.dark .create-form h2 {
+  color: var(--white, whitesmoke);
+}
+.dark .create-form span {
+  color: var(--white, whitesmoke);
+}
+.dark .create-form input,
+.dark .create-form textarea {
+  background: #ddd;
+}
