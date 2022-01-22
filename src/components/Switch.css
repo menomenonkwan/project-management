@@ -1,11 +1,24 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .switch {
   height: 30px;
   width: 75px;
   border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 5px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
 }
@@ -13,7 +26,10 @@
   height: 20px;
   width: 20px;
   border-radius: 50%;
+  display: -ms-grid;
   display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   justify-items: center;
   background-color: #fefefe;
@@ -46,24 +62,31 @@
 .mode-switch {
   height: 30px;
   width: 55px;
+  background: -o-radial-gradient(
+    10% 20%,
+    circle farthest-corner,
+    #e79950 0%,
+    #bb4848 100.2%
+  );
   background: radial-gradient(
     circle farthest-corner at 10% 20%,
     #e79950 0%,
     #bb4848 100.2%
   );
-  /* background: radial-gradient(
-    circle farthest-corner at 10% 20%,
-    #fdcb32 0%,
-    #f43862 100.2%
-  ); */
-  /*D0B05C BB4848 */
   border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 5px;
   margin-right: 30px;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .mode-switch-icon {
@@ -74,7 +97,13 @@
   color: #f88748;
 }
 [data-darkmode="true"] {
-  /* background: #52527a; */
+  background: -o-radial-gradient(
+    10% 20%,
+    circle farthest-corner,
+    #3e0574 -5.2%,
+    #290e97 -5.2%,
+    #d84494 103.3%
+  );
   background: radial-gradient(
     circle farthest-corner at 10% 20%,
     #3e0574 -5.2%,
@@ -83,6 +112,7 @@
   );
 }
 [data-darkmode="true"] .mode-switch {
+  background: -o-linear-gradient(340.2deg);
   background: linear-gradient(109.8deg);
 }
 [data-darkmode="true"] .mode-switch-icon {

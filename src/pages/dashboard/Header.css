@@ -1,14 +1,31 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .dashboard-header {
-  /* width: 90%; */
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(transparent),
+    to(rgba(0, 0, 0, 0.15))
+  );
+  background: -o-linear-gradient(bottom, transparent, rgba(0, 0, 0, 0.15));
   background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.15));
   margin: 0 auto 20px;
   padding: 20px;
-  /* box-shadow: var(--bs); */
 }
 .dashboard-general-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  /* justify-content: space-between; */
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .dashboard-general-info h1 {

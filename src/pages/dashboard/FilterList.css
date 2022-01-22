@@ -1,28 +1,31 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .filter {
-  /* background: greenyellow; */
   margin-top: 20px;
 }
 .filter-list {
-  /* background: hotpink; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .filter-list li {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
 }
 .filter-btn {
-  /* background: var(--white, whitesmoke); */
-  /* font-family: var(--secondary, serif); */
   font-family: inherit;
-  /* font-weight: lighter; */
   font-size: 0.9em;
   padding: 5px 10px;
   border-radius: 0;
   border: none;
-  /* border-bottom: 1px solid var(--grey, grey); */
   cursor: pointer;
-}
-.filter-btn:hover {
 }
 .filter-active {
   background: var(--turquoise, turquoise);

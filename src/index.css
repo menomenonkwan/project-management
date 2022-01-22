@@ -1,4 +1,10 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap"); */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Raleway:wght@300;400;600&display=swap");
 
 :root {
@@ -26,6 +32,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 

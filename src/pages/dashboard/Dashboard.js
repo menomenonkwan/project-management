@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useCollection } from '../../hooks/useCollection';
 import { useAuthContext } from '../../hooks/useAuthContext';
+import { useThemeContext } from '../../hooks/useThemeContext';
 
 // components
 import ProjectList from '../../components/ProjectList';
@@ -8,7 +9,6 @@ import Header from './Header';
 
 // styles
 import './Dashboard.css';
-import { useThemeContext } from '../../hooks/useThemeContext';
 
 export default function Dashboard() {
   const [filter, setFilter] = useState('all');
@@ -17,8 +17,6 @@ export default function Dashboard() {
   const { user } = useAuthContext();
   const { mode } = useThemeContext();
   
-  console.log(mode);
-
   const changeFilter = (newFilter) => {
     setFilter(newFilter);
   }
@@ -69,7 +67,6 @@ export default function Dashboard() {
 
   return (
     <div className={`main-wrapper dashboard ${mode}`}>
-    {/* <div className="main-wrapper dashboard"> */}
       <Header percentage={percentage} currentFilter={filter} changeFilter={changeFilter} />
 
       {error && <p className='error'>{error}</p>}

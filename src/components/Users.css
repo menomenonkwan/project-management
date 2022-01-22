@@ -1,4 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .users {
+  background: -o-linear-gradient(215deg, var(--turquoise, turquoise), #397a8a);
   background: linear-gradient(235deg, var(--turquoise, turquoise), #397a8a);
   min-width: 200px;
   text-align: center;
@@ -8,27 +16,11 @@
   margin: 20px 0;
 }
 .online-status {
-  /* position: relative; */
   font-size: 1.05em;
   text-transform: uppercase;
   text-align: left;
   padding-top: 20px;
 }
-/* .online-status::after {
-  content: "";
-  width: 90%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    var(--grey, grey),
-    var(--grey, grey),
-    var(--turquoise, turquoise)
-  );
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-radius: 50%;
-} */
 .users-list {
   background: rgba(0, 0, 0, 0.05);
 }
@@ -36,8 +28,14 @@
   background: rgba(0, 0, 0, 0.075);
   padding: 10px;
   margin: 3px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .online {
@@ -52,6 +50,7 @@
   margin: 0 8px;
   overflow: hidden;
   font-weight: lighter;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   word-wrap: break-word;
   display: block;
@@ -62,7 +61,11 @@
 
 /* THEME  */
 .users.dark {
-  /* filter: brightness(85%); */
+  background: -o-linear-gradient(
+    215deg,
+    var(--dark-mode-turquoise),
+    var(--dark-mode-blue)
+  );
   background: linear-gradient(
     235deg,
     var(--dark-mode-turquoise),
@@ -73,13 +76,6 @@
   background: none;
 }
 .dark .user {
-  /* background: rgba(0, 0, 0, 0.075); */
   background: var(--violet);
   color: var(--white, whitesmoke);
 }
-
-/* @media (max-width: 1200px) {
-  .users {
-    width: unset;
-  }
-} */

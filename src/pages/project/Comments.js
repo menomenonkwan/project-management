@@ -35,9 +35,7 @@ export default function Comments({ document }) {
   return (
     <div className='project-comments'>
       <h4>Project Comments:</h4>
-        {/* {document.comments.length === 0 && (
-          <p className='no-comment'>No comments...</p>
-        )} */}
+
         {document.comments.length === 0 
           ? <p className='no-comment'>No comments...</p>
           :

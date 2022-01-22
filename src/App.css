@@ -1,7 +1,23 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
 }
@@ -11,7 +27,10 @@
   padding: 8px 12px;
   font-size: 1em;
   display: inline-block;
+  -webkit-box-shadow: var(--bs);
   box-shadow: var(--bs);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: 2px solid var(--purple, purple);
   background: var(--purple, purple);
@@ -20,6 +39,7 @@
 
 .btn:hover {
   color: #ddd;
+  -webkit-box-shadow: none;
   box-shadow: none;
   background: rgba(77, 48, 57, 0.84);
 }
@@ -29,21 +49,26 @@
 }
 
 .container {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   place-content: center;
   width: 100%;
-  /* height: 100%; */
 }
 .main-wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   padding: 75px 50px;
-  /* display: grid; */
-  /* place-content: top; */
 }
 
 /* FORMS (LOGIN/SIGNUP) */
 .form-container {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   max-width: 90%;
   width: 400px;
@@ -53,6 +78,7 @@ form {
   width: 100%;
   background: #fefefe;
   padding: 40px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.025);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.025);
 }
 form h2 {

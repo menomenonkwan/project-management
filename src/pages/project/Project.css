@@ -1,19 +1,34 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .project {
-  /* display: grid;
-  place-content: center; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: #fefefe;
+  -webkit-box-shadow: var(--bs);
   box-shadow: var(--bs);
   min-height: 500px;
 }
 
 /* details section  */
 .project-summary {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
-  /* background: darkorchid; */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  /* justify-content: center; */
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   padding: 40px;
 }
@@ -34,6 +49,26 @@
   position: absolute;
   bottom: 4px;
   left: 3%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--turquoise, turquoise)),
+    color-stop(var(--grey, grey)),
+    color-stop(var(--grey, grey)),
+    color-stop(var(--grey, grey)),
+    color-stop(var(--white, whitesmoke)),
+    to(transparent)
+  );
+  background: -o-linear-gradient(
+    left,
+    var(--turquoise, turquoise),
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--white, whitesmoke),
+    transparent
+  );
   background: linear-gradient(
     to right,
     var(--turquoise, turquoise),
@@ -58,7 +93,11 @@
   text-transform: capitalize;
 }
 .project-assigned {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 1.2em;
   color: var(--purple, purple);
@@ -78,18 +117,16 @@
   line-height: 1.5;
   font-size: 1.1em;
 }
-.project-created-at {
-}
 .project-created-by {
   text-transform: capitalize;
 }
-.project-priority {
-  /* font-weight: bold; */
-}
 .project-buttons {
-  /* margin-top: auto; */
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 .delete-project {
@@ -106,28 +143,38 @@
 
 /* comment section  */
 .project-comments {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
-  /* background: greenyellow; */
   max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 40px;
 }
 .project-comments h4 {
-  /* text-align: center; */
   color: var(--purple, purple);
 }
 .no-comment {
   background: rgba(0, 0, 0, 0.05);
   text-align: center;
+  display: -ms-grid;
   display: grid;
   place-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   font-size: 0.8em;
   color: var(--grey, grey);
   margin: 10px 0 20px;
 }
 .comments-list {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   max-height: 300px;
   width: 100%;
@@ -137,25 +184,43 @@
   border: 1px solid var(--grey, grey);
   margin: 10px 0 40px;
   background: var(--white, whitesmoke);
-  /* padding: 10px; */
   scrollbar-color: var(--purple, purple) var(--turquoise, turquoise);
   scrollbar-width: thin;
+  -webkit-box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.075);
 }
 .comments-comment-info {
   padding: 15px;
-  /* margin: 10px 0; */
   position: relative;
 }
 .comments-comment-info::after {
   content: "";
-  /* z-index: -1; */
   width: 100%;
   height: 1px;
   background: black;
   position: absolute;
   bottom: 2px;
   left: 3%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--turquoise, turquoise)),
+    color-stop(var(--grey, grey)),
+    color-stop(var(--grey, grey)),
+    color-stop(var(--grey, grey)),
+    color-stop(var(--white, whitesmoke)),
+    to(transparent)
+  );
+  background: -o-linear-gradient(
+    left,
+    var(--turquoise, turquoise),
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--grey, grey),
+    var(--white, whitesmoke),
+    transparent
+  );
   background: linear-gradient(
     to right,
     var(--turquoise, turquoise),
@@ -168,8 +233,14 @@
   border-radius: 2px 100% 1px 0;
 }
 .comment-poster {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .comment-poster-name {
@@ -189,11 +260,11 @@
 .add-comment {
   margin-top: auto;
   padding: 0px;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .add-comment label {
   margin-top: 0;
-  /* font-weight: lighter; */
 }
 .add-comment span {
   font-size: 0.9em;

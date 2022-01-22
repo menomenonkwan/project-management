@@ -1,27 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .project-list {
-  /* background: rgba(0, 0, 0, 0.1); */
-  /* margin-top: 75px; */
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
-  /* width: 90%; */
   margin: auto;
   place-content: center;
 }
 .card {
-  /* background: var(--white, whitesmoke); */
   background: #fefefe;
-  /* background: salmon; */
   padding: 25px;
-  /* margin: 10px 0; */
+  -webkit-box-shadow: var(--bs);
   box-shadow: var(--bs);
-  /* font-size: 2em; */
   position: relative;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .card:hover {
   background: #fafafa;
-  /* background: var(--turquoise, turquoise); */
 }
 .card-name {
   font-size: 1.25em;
@@ -38,16 +41,11 @@
   font-weight: lighter;
 }
 .card .prioritize {
-  /* width: 25px; */
   font-family: var(--secondary), "serif";
   height: 20px;
   padding: 15px;
-  /* background: darkred; */
-  /* background: var(--purple); */
   background: var(--violet, violet);
   color: var(--white, whitesmoke);
-  /* color: var(--white); */
-  /* background: rgb(247, 69, 69); */
   position: absolute;
   top: 0;
   right: 0;
@@ -57,6 +55,7 @@
   font-weight: bold;
   text-align: right;
   border-bottom-left-radius: 12px;
+  -webkit-box-shadow: var(--bs);
   box-shadow: var(--bs);
 }
 .card .non-prioritize {
@@ -70,19 +69,15 @@
   padding-top: 10px;
 }
 .card-assigned ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .card-assigned li {
   margin-right: 10px;
 }
-.card-assigned .avatar {
-  /* width: 30px;
-  height: 30px; */
-}
 .card-completed {
   background: #aeaeae;
-  /* text-decoration: line-through; */
-  /* color: var(--grey, grey); */
   color: var(--white, whitesmoke);
 }
 .card-completed .card-category {
@@ -95,7 +90,6 @@
 }
 .dark .card:hover {
   background: #ccc;
-  /* background: var(--turquoise, turquoise); */
 }
 .dark .card-completed {
   background: var(--grey, grey);

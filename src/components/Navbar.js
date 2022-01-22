@@ -1,11 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import { useThemeContext } from '../hooks/useThemeContext';
 
 // styles & images
 import './Navbar.css';
 import dashboardIcon from '../assets/dashboard.svg';
 import addIcon from '../assets/add.svg';
-import taskIcon from '../assets/task.svg';
-import { useThemeContext } from '../hooks/useThemeContext';
 
 export default function Navbar() {
   const { mode } = useThemeContext();

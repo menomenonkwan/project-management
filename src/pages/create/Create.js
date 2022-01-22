@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
-import Select from 'react-select';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useCollection } from '../../hooks/useCollection';
+import { useFirestore } from '../../hooks/useFirestore';
+import { useNavigate } from 'react-router-dom';
+import { useThemeContext } from '../../hooks/useThemeContext';
+
+// components
 import Switch from '../../components/Switch';
+import Select from 'react-select';
 
 // firebase imports
 import { Timestamp } from "firebase/firestore";
 
 // styles
 import './Create.css';
-import { useFirestore } from '../../hooks/useFirestore';
-import { useNavigate } from 'react-router-dom';
-import { useThemeContext } from '../../hooks/useThemeContext';
 
 const categoryOptions = [
   { value: 'cleaning', label: 'Cleaning' },
@@ -68,7 +70,6 @@ export default function Create() {
       setFormError('Please assign the project to someone');
       return;
     }
-    // add user for createdby and comments[]
 
     const createdBy = {
       displayName: user.displayName,
@@ -143,7 +144,6 @@ export default function Create() {
         <label className='prioritize'>
           <span>Prioritize:</span>
           <Switch isOn={priority} setIsOn={setPriority} />
-          {/* <span className='is-priority'>{priority ? 'yes' : 'no'}</span> */}
         </label>
 
         {/* CATEGORY */}

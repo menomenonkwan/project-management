@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { useThemeContext } from '../hooks/useThemeContext';
 
 // styles & images
 import './Switch.css';
@@ -6,7 +7,6 @@ import yesIcon from '../assets/yes.svg';
 import noIcon from '../assets/no.svg';
 import lightIcon from '../assets/light_mode.svg';
 import darkIcon from '../assets/dark_mode.svg';
-import { useThemeContext } from '../hooks/useThemeContext';
 
 const ModeSwitch = ({ isOn, setIsOn }) => {
   const { mode, changeMode } = useThemeContext();

@@ -1,8 +1,8 @@
 import { useThemeContext } from '../hooks/useThemeContext';
-
-// styles
 import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
+
+// styles
 import './ProjectList.css';
 
 export default function ProjectList({ projects }) {

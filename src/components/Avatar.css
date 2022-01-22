@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .avatar {
   width: 25px;
   min-width: 25px;
@@ -5,6 +12,7 @@
   min-height: 25px;
   border-radius: 50%;
   overflow: hidden;
+  -webkit-box-shadow: var(--bs);
   box-shadow: var(--bs);
   background: var(--white, whitesmoke);
 }

@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { useThemeContext } from '../../hooks/useThemeContext';
 
 // components
 import Switch from '../../components/Switch';
-import { useThemeContext } from '../../hooks/useThemeContext';
 import CircleProgress from './CircleProgress';
 import FilterList from './FilterList';
 

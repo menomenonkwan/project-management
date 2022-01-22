@@ -1,7 +1,15 @@
-.circle-progress {
-  /* border: 1px solid red; */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
 
+.circle-progress {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }

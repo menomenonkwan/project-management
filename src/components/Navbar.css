@@ -1,12 +1,27 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .navbar {
   margin-bottom: 40px;
 }
 .navbar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 10px 15px;
   font-weight: normal;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .navbar img {
@@ -14,7 +29,6 @@
 }
 .navbar a:hover {
   background: rgba(142, 217, 236, 0.5);
-  /* background: rgba(250, 128, 114, 0.5); */
 }
 .active {
   background: var(--salmon, salmon);
