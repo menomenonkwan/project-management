@@ -92,15 +92,16 @@
   display: flex;
   justify-content: flex-start;
 }
+.delete-project {
+  margin-right: 20px;
+}
 .is-complete-btn {
   background: rgba(0, 0, 0, 0.5) !important;
   color: var(--purple, purple) !important;
-  margin-left: 20px;
 }
 .not-complete-btn {
   color: var(--purple, purple) !important;
   background: rgba(0, 0, 0, 0.15) !important;
-  margin-left: 20px;
 }
 
 /* comment section  */

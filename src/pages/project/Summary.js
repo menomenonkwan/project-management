@@ -40,7 +40,7 @@ export default function Summary({ document }) {
       <div className="project-buttons">
         {/* delete button */}
         {user.uid === document.createdBy.id && 
-          <button className="btn" onClick={handleDelete}>Delete</button>
+          <button className="btn delete-project" onClick={handleDelete}>Delete</button>
         }      
         {/* complete button  */}
         {document.complete ? <button className="btn is-complete-btn" onClick={handleUpdate}>Mark as Incomplete</button> :

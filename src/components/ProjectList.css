@@ -20,7 +20,8 @@
   transition: all 0.2s ease;
 }
 .card:hover {
-  background: var(--turquoise, turquoise);
+  background: #fafafa;
+  /* background: var(--turquoise, turquoise); */
 }
 .card-name {
   font-size: 1.25em;
@@ -93,7 +94,8 @@
   background: #ddd;
 }
 .dark .card:hover {
-  background: var(--turquoise, turquoise);
+  background: #ccc;
+  /* background: var(--turquoise, turquoise); */
 }
 .dark .card-completed {
   background: var(--grey, grey);
